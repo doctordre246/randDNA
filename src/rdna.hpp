@@ -6,12 +6,22 @@ using namespace std;
 
 
 string randDNA(int seed, string bases, int n){
-	
+	if( bases == ""){
+        
+        return "";
+    }
 	std::mt19937 eng1(seed);
-	int max = base.size()= 3;
-	int min = base.size()=0;
+	int max = base.size()-1;
+	int min = 0;
+    uniform_int_distribution<>uform(min,max);
+    string dna="";
+    int randnum=0;
+    for(int i=0;i < n; i++){
+        randnum = uform(eng1);
+        dna =dna + bases[randnum];   
+    }
 	
 	
 	
-	return ;
+	return dna;
 }
