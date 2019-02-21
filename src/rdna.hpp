@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include <random>
 
 using namespace std;
 
@@ -11,7 +11,7 @@ string randDNA(int seed, string bases, int n){
         return "";
     }
 	std::mt19937 eng1(seed);
-	int max = base.size()-1;
+	int max = bases.size()-1;
 	int min = 0;
     uniform_int_distribution<>uform(min,max);
     string dna="";
